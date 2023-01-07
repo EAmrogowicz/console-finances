@@ -15,33 +15,11 @@ browser's console.
 
 ## Installation
 
-Follow these instructions to create your project and deploy it to GitHub Pages:
+Add JavaScript right before closing `</body>` tag in the html file:
 
-1. Create a new repository called `Console-Finances` on your GitHub account and
-   clone it to your computer.
-
-1. When you're ready to deploy, use the `git add`, `git commit`, and `git push`
-   commands to save and push your code to your GitHub repository.
-
-1. Navigate to your GitHub repository in the browser and then select the
-   Settings tab on the right side of the page.
-
-1. On the Settings page, scroll down to the GitHub Pages section. Then, in the
-   section labeled Source, select the `main` branch as your source.
-
-1. Navigate to <your-github-username.github.io/your-repository-name> and you
-   will find that your new webpage has gone live! For example, if your GitHub
-   username is "lernantino" and the project is "css-demo-site", then your URL
-   would be <lernantino.github.io/css-demo-site>.
-
-> **Important**: It might take a few minutes for GitHub pages to display your
-> site correctly. If your project does not deploy or display correctly, check
-> that all file paths in your application are relative and use the right casing.
-> GitHub is case-sensitive, an inccorect capital or lowercase letter could cause
-> problems in deployment.
-
-Be sure to add, commit, and push your work to see the most up-to-date version of
-your app!
+```html
+<script src="./index.js"></script>
+```
 
 ## Usage
 
@@ -51,7 +29,7 @@ GitHub source files: https://github.com/EAmrogowicz/console-finances.
 
 The following image shows the console application's appearance and
 functionality:
-![Console finacial analysis includes a total month line, total income, average change, greatest increase in profits, and greatest degrease in losses.](./assets/Screenshot-consoleOutput.png)
+![Console finacial analysis includes a total month line, total income, average change, greatest increase in profits, and greatest degrease in losses.](./assets/Reference%20-%20consoleOutput.png)
 
 ## Requirements
 
@@ -66,9 +44,8 @@ following:
 
 - The average of the **changes** in Profit/Losses over the entire period.
 
-  - You will need to track what the total change in profits are from month to
-    month and then find the average.
-  - (`Total/Number of months`)
+  - Track what the total change in profits are from month to month and then find
+    the average.
 
 - The greatest increase in profits (date and amount) over the entire period.
 
@@ -78,9 +55,7 @@ Your final code should print the analysis to the console.
 
 ## Credits
 
-Reference for ReadMe specification:
-
-- 2022 edX Boot Camps LLC.
+N/A
 
 ## License
 
