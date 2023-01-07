@@ -124,11 +124,11 @@ let changesAverage = (changes / (finances.length - 1)).toFixed(2);
 //Print results to console
 console.log(`Financial Analysis \n----------------------------`);
 console.log(`Total Months: ${finances.length}`);
-console.log(`Total: ${totalFinaces}`);
-console.log(`Average Change: ${changesAverage}`);
+console.log(`Total: $${totalFinaces}`);
+console.log(`Average Change: $${changesAverage}`);
 console.log(
-  `Greatest Increase in Profits: ${greatestProfitMonth} (${greatestProfit})`
+  `Greatest Increase in Profits: ${greatestProfitMonth} ($${greatestProfit})`
 );
 console.log(
-  `Greatest Decrease in Profits: ${greatestLossesMonth} (${greatestLosses})`
+  `Greatest Decrease in Profits: ${greatestLossesMonth} ($${greatestLosses})`
 );
