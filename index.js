@@ -97,15 +97,22 @@ let changes = 0;
 //constant represents the minimum
 let greatestProfit = Number.MIN_SAFE_INTEGER;
 let greatestProfitMonth;
+//constant represents the maximum
+let greatestLosses = Number.MAX_SAFE_INTEGER;
+let greatestLossesMonth;
 
 for (let i = 1; i < finances.length; i++) {
   const change = finances[i][1] - finances[i - 1][1];
   changes = changes + change;
-
   //Find the greatest increase in profits (date and amount) over the entire period
   if (greatestProfit < change) {
     greatestProfit = change;
     greatestProfitMonth = finances[i][0];
+  }
+  //Find the greatest decrease in losses (date and amount) over the entire period
+  if (greatestLosses > change) {
+    greatestLosses = change;
+    greatestLossesMonth = finances[i][0];
   }
 }
 
@@ -120,4 +127,7 @@ console.log(`Total: ${totalFinaces}`);
 console.log(`Average Change: ${changesAverage}`);
 console.log(
   `Greatest Increase in Profits: ${greatestProfitMonth} (${greatestProfit})`
+);
+console.log(
+  ` Greatest Decrease in Profits: ${greatestLossesMonth} (${greatestLosses})`
 );
