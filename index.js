@@ -94,10 +94,10 @@ const totalFinaces = finances.reduce((accumulator, current) => {
 }, 0);
 
 let changes = 0;
-//constant represents the minimum
+//constant represents the minimum base value
 let greatestProfit = Number.MIN_SAFE_INTEGER;
 let greatestProfitMonth;
-//constant represents the maximum
+//constant represents the maximum base value
 let greatestLosses = Number.MAX_SAFE_INTEGER;
 let greatestLossesMonth;
 
@@ -120,7 +120,7 @@ for (let i = 1; i < finances.length; i++) {
 //Round values to nearest 100th
 let changesAverage = (changes / (finances.length - 1)).toFixed(2);
 
-//Print results
+//Print results to console
 console.log(`Financial Analysis \n----------------------------`);
 console.log(`Total Months: ${finances.length}`);
 console.log(`Total: ${totalFinaces}`);
