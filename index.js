@@ -1,4 +1,4 @@
-//Data base
+//Dataset
 let finances = [
   ["Jan-2010", 867884],
   ["Feb-2010", 984655],
@@ -101,6 +101,7 @@ let greatestProfitMonth;
 let greatestLosses = Number.MAX_SAFE_INTEGER;
 let greatestLossesMonth;
 
+//Start the loop from 1 to compare with previous value
 for (let i = 1; i < finances.length; i++) {
   const change = finances[i][1] - finances[i - 1][1];
   changes = changes + change;
