@@ -129,5 +129,5 @@ console.log(
   `Greatest Increase in Profits: ${greatestProfitMonth} (${greatestProfit})`
 );
 console.log(
-  ` Greatest Decrease in Profits: ${greatestLossesMonth} (${greatestLosses})`
+  `Greatest Decrease in Profits: ${greatestLossesMonth} (${greatestLosses})`
 );
