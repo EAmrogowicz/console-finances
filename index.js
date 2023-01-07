@@ -94,10 +94,19 @@ const totalFinaces = finances.reduce((accumulator, current) => {
 }, 0);
 
 let changes = 0;
+//constant represents the minimum
+let greatestProfit = Number.MIN_SAFE_INTEGER;
+let greatestProfitMonth;
 
 for (let i = 1; i < finances.length; i++) {
   const change = finances[i][1] - finances[i - 1][1];
   changes = changes + change;
+
+  //Find the greatest increase in profits (date and amount) over the entire period
+  if (greatestProfit < change) {
+    greatestProfit = change;
+    greatestProfitMonth = finances[i][0];
+  }
 }
 
 //Calculate the average of the **changes** in Profit/Losses over the entire period
@@ -109,3 +118,6 @@ console.log(`Financial Analysis \n----------------------------`);
 console.log(`Total Months: ${finances.length}`);
 console.log(`Total: ${totalFinaces}`);
 console.log(`Average Change: ${changesAverage}`);
+console.log(
+  `Greatest Increase in Profits: ${greatestProfitMonth} (${greatestProfit})`
+);
